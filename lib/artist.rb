@@ -13,12 +13,16 @@ class Artist
   end 
   
   def new_song(name, genre)
-    # binding.pry
-    song = Artist.new(name)
+    song = Song.new(name, self, genre)
+    song 
   end 
   
-  # def songs 
-  #   self.all.each {|artist| artist.songs}
-  # end 
+  def songs 
+    Song.all.select {|song| song.artist == self}
+  end 
+  
+  def genres 
+    Song.all.collect {|song| song.genre }
+  end 
 
 end 
