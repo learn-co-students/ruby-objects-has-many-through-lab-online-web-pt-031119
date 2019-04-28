@@ -1,0 +1,3 @@
+class Doctor
+@@all = []
+end
