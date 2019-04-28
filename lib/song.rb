@@ -1,4 +1,6 @@
+require 'pry'
 class Song
+  attr_accessor :name, :artist, :genre
   @@all = []
 
 def initialize(name, artist, genre)
@@ -6,6 +8,12 @@ def initialize(name, artist, genre)
   @artist = artist
   @genre = genre
   @@all.push(self)
+  # song = []
+  # song << @name
+  # song << @artist
+  # song << @genre
+  # binding.pry
+end
 
   def self.all
     @@all
